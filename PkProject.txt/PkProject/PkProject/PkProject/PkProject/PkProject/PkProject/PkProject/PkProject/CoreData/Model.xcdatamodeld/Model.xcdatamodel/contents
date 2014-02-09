@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Answer" representedClassName="Answer" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="other" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="survey" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Survey" inverseName="answers" inverseEntity="Survey" syncable="YES"/>
+    </entity>
+    <entity name="Survey" representedClassName="Survey" syncable="YES">
+        <attribute name="employeeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surveyComment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surveyDealer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surveyID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updateTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Answer" inverseName="survey" inverseEntity="Answer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Answer" positionX="441" positionY="216" width="128" height="120"/>
+        <element name="Survey" positionX="160" positionY="192" width="128" height="165"/>
+    </elements>
+</model>
